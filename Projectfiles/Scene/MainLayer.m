@@ -22,7 +22,6 @@
 - (id)init {
   self = [super init];
   if (self) {
-    lastSwipeDirection_ = -1;
     KKInput* input = [KKInput sharedInput];
     input.gestureSwipeEnabled = YES;
     CommandType types[] = {CommandTypeCircle, CommandTypeSquare, CommandTypeTriangle};
@@ -70,9 +69,8 @@
   KKInput* input = [KKInput sharedInput];
   if (input.gesturesAvailable) {
     KKSwipeGestureDirection dir = input.gestureSwipeDirection;
-    if (lastSwipeDirection_ != dir) {
-      if (dir == KKSwipeGestureDirectionLeft || dir == KKSwipeGestureDirectionRight) {
-        [manager printStack];
+    if ([input gestureSwipeRecognizedThisFrame]) {
+      if (dir == KKSwipeGestureDirectionLeft || dir == KKSwipeGestureDirectionRight) {        
         Direction d = dir == KKSwipeGestureDirectionLeft ? DirectionLeft : DirectionRight;
         int count = (int)[manager.commands count];
         for (int i = 0; i < count; ++i) {
@@ -80,25 +78,7 @@
         }
       }
     }
-    lastSwipeDirection_ = dir;
   }
-}
-
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-  lastPosition_ = [self convertTouchToNodeSpace:touch];
-  return YES;
-}
-
-- (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-  CGPoint currentPosition = [self convertTouchToNodeSpace:touch];
-  if (ccpDistance(currentPosition, lastPosition_) < 5) {
-    lastSwipeDirection_ = -1;
-  }
-  lastPosition_ = currentPosition;
-}
-
-- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
-  lastSwipeDirection_ = -1;
 }
 
 - (void)attackTo:(Direction)dir {
