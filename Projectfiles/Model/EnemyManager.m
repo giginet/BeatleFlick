@@ -35,6 +35,7 @@
   CommandType type = types[idx];
   NSString* filename = [self filenameWithType:@"enemy" type:type];
   Enemy* enemy = [[Enemy alloc] initWithFile:filename type:type direction:direction];
+  enemy.manager = self;
   return enemy;
 }
 
@@ -51,6 +52,27 @@
     return [self popEnemy:dir];
   }
   return nil;
+}
+
+- (BOOL)attackEnemy:(Direction)dir type:(CommandType)type {
+  for (Enemy* enemy in self.enemies) {
+    if (enemy.direction == dir) {
+      if (enemy.type == type) {
+        [enemy damage:1];
+        return YES;
+      }
+      return NO;
+    }
+  }
+  return NO;
+}
+
+- (BOOL)removeEnemy:(Enemy *)enemy {
+  if ([self.enemies indexOfObject:enemy]) {
+    [enemies_ removeObject:enemy];
+    return YES;
+  }
+  return NO;
 }
 
 - (NSString*)filenameWithType:(NSString *)prefix type:(CommandType)type {

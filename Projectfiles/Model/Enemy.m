@@ -7,6 +7,7 @@
 //
 
 #import "Enemy.h"
+#import "EnemyManager.h"
 
 @interface Enemy()
 - (void)onReachToCenter;
@@ -16,6 +17,7 @@
 @synthesize hp;
 @synthesize type;
 @synthesize direction;
+@synthesize manager;
 
 - (id)initWithTexture:(CCTexture2D *)texture {
   self = [super initWithTexture:texture];
@@ -27,6 +29,7 @@
 - (id)initWithFile:(NSString *)filename type:(CommandType)t direction:(Direction)dir {
   self = [super initWithFile:filename];
   if (self) {
+    hp = 1;
     type = t;
     direction = dir;
     CCDirector* director = [CCDirector sharedDirector];
@@ -43,8 +46,23 @@
   return self;
 }
 
+- (BOOL)damage:(int)damage {
+  hp -= damage;
+  if (hp <= 0) {
+    [self death];
+    return YES;
+  }
+  return NO;
+}
+
+- (void)death {
+  [self.parent removeChild:self cleanup:YES];
+  [self.manager removeEnemy:self];
+}
+
 - (void)onReachToCenter {
   [self.parent removeChild:self cleanup:YES];
+  [self.manager removeEnemy:self];
 }
 
 @end

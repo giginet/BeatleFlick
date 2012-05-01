@@ -9,6 +9,8 @@
 #import "CCSprite.h"
 #import "Command.h"
 
+@class EnemyManager;
+
 typedef enum {
   DirectionLeft,
   DirectionRight,
@@ -20,9 +22,12 @@ typedef enum {
 @property(readwrite) int hp;
 @property(readonly) CommandType type;
 @property(readonly) Direction direction;
+@property(readwrite, weak) EnemyManager* manager;
 
 - (id)initWithFile:(NSString*)filename 
               type:(CommandType)t 
          direction:(Direction)dir;
+- (BOOL)damage:(int)damage;
+- (void)death;
 
 @end

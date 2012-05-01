@@ -19,5 +19,7 @@
 
 - (Enemy*)popEnemy:(Direction)direction;
 - (Enemy*)lotPopEnemy;
+- (BOOL)attackEnemy:(Direction)dir type:(CommandType)type;
+- (BOOL)removeEnemy:(Enemy*)enemy;
 
 @end
