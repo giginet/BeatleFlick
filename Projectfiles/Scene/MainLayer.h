@@ -7,7 +7,10 @@
 //
 
 #import "heqet.h"
+#import "CommandManager.h"
 
 @interface MainLayer : KWLayer
+
+@property(readonly, strong) CommandManager* manager;
 
 @end

@@ -9,7 +9,7 @@
 #import "CommandManager.h"
 
 @implementation CommandManager
-@synthesize commands;
+@synthesize commands = commands_;
 
 - (id)init {
   self = [super init];
@@ -20,7 +20,7 @@
 }
 
 - (void)pushCommand:(CommandType)type {
-  int count = [commands count];
+  int count = [commands_ count];
   if (count >= 3) {
     [commands_ removeObjectsInRange:NSMakeRange(0, count - 2)];
   }

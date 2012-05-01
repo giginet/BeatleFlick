@@ -7,15 +7,37 @@
 //
 
 #import "MainLayer.h"
+#import "Command.h"
+
+@interface MainLayer()
+- (void)pressButton:(CommandType)type;
+@end
 
 @implementation MainLayer
+@synthesize manager;
 
 - (id)init {
   self = [super init];
   if (self) {
-    [self schedule:@selector(update:) interval:0.1];
     KKInput* input = [KKInput sharedInput];
     input.gestureSwipeEnabled = YES;
+    CommandType types[] = {CommandTypeCircle, CommandTypeSquare, CommandTypeTriangle};
+    CCMenuItem* items[3];
+    for (int i = 0; i < 3; ++i) {
+      NSString* filename = [NSString stringWithFormat:@"button%d.png", i];
+      __block CommandType type = types[i];
+      __block MainLayer* layer = self;
+      CCMenuItemImage* item = [CCMenuItemImage itemFromNormalImage:filename 
+                                                     selectedImage:filename 
+                                                             block:^(id sender){
+                                                               [layer pressButton:type];
+      }];
+      items[i] = item;
+    }
+    CCMenu* menu = [CCMenu menuWithItems:items[0], items[1], items[2], nil];
+    [menu alignItemsHorizontally];
+    [self addChild:menu];
+    manager = [[CommandManager alloc] init];
   }
   return self;
 }
@@ -43,6 +65,11 @@
         break;
     }
   }
+}
+
+- (void)pressButton:(CommandType)type {
+  [manager pushCommand:type];
+  NSLog(@"%d", [manager.commands count]);
 }
 
 @end
