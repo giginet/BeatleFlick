@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "CCLayer.h"
+#import "heqet.h"
 
-@interface MainLayer : CCLayer
+@interface MainLayer : KWLayer
 
 @end

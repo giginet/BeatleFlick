@@ -8,6 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		073D4FF0154F65C0007773C9 /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D4FEF154F65C0007773C9 /* MainLayer.m */; };
+		073D5029154F6A12007773C9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 073D4FF4154F6A12007773C9 /* .gitignore */; };
+		073D502A154F6A12007773C9 /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D4FF8154F6A12007773C9 /* KWMusicManager.m */; };
+		073D502B154F6A12007773C9 /* tinymt32.c in Sources */ = {isa = PBXBuildFile; fileRef = 073D4FFB154F6A12007773C9 /* tinymt32.c */; };
+		073D502C154F6A12007773C9 /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D4FFF154F6A12007773C9 /* KWLayer.m */; };
+		073D502D154F6A12007773C9 /* KWState.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5001154F6A12007773C9 /* KWState.m */; };
+		073D502E154F6A12007773C9 /* KWStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5003154F6A12007773C9 /* KWStateManager.m */; };
+		073D502F154F6A12007773C9 /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5006154F6A12007773C9 /* CCSpriteExtension.m */; };
+		073D5030154F6A12007773C9 /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5008154F6A12007773C9 /* KWAnimation.m */; };
+		073D5031154F6A12007773C9 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D500A154F6A12007773C9 /* KWGauge.m */; };
+		073D5032154F6A12007773C9 /* KWMessageWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D500C154F6A12007773C9 /* KWMessageWindow.m */; };
+		073D5033154F6A12007773C9 /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D500F154F6A12007773C9 /* KWPieChart.m */; };
+		073D5034154F6A12007773C9 /* KWScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5011154F6A12007773C9 /* KWScrollLayer.m */; };
+		073D5035154F6A12007773C9 /* KWShadowLabelTTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5013154F6A12007773C9 /* KWShadowLabelTTF.m */; };
+		073D5036154F6A12007773C9 /* KWTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5015154F6A12007773C9 /* KWTimerLabel.m */; };
+		073D5037154F6A12007773C9 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5018154F6A12007773C9 /* KWDrawingPrimitives.m */; };
+		073D5038154F6A12007773C9 /* KWRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D501A154F6A12007773C9 /* KWRandom.m */; };
+		073D5039154F6A12007773C9 /* KWSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D501C154F6A12007773C9 /* KWSingleton.m */; };
+		073D503A154F6A12007773C9 /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D501E154F6A12007773C9 /* KWTimer.m */; };
+		073D503B154F6A12007773C9 /* KWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5020154F6A12007773C9 /* KWUtility.m */; };
+		073D503C154F6A12007773C9 /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5022154F6A12007773C9 /* KWVector.m */; };
+		073D503D154F6A12007773C9 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5024154F6A12007773C9 /* NSArrayExtension.m */; };
+		073D503E154F6A12007773C9 /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = 073D5025154F6A12007773C9 /* README.rst */; };
+		073D503F154F6A12007773C9 /* graphic_converter.py in Resources */ = {isa = PBXBuildFile; fileRef = 073D5027154F6A12007773C9 /* graphic_converter.py */; };
+		073D5040154F6A12007773C9 /* sound_converter.py in Resources */ = {isa = PBXBuildFile; fileRef = 073D5028154F6A12007773C9 /* sound_converter.py */; };
+		073D5052154F6DF0007773C9 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D5043154F6CB2007773C9 /* HelloWorldLayer.m */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -45,6 +70,54 @@
 /* Begin PBXFileReference section */
 		073D4FEE154F65C0007773C9 /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainLayer.h; path = Scene/MainLayer.h; sourceTree = "<group>"; };
 		073D4FEF154F65C0007773C9 /* MainLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainLayer.m; path = Scene/MainLayer.m; sourceTree = "<group>"; };
+		073D4FF4154F6A12007773C9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		073D4FF7154F6A12007773C9 /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
+		073D4FF8154F6A12007773C9 /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
+		073D4FF9154F6A12007773C9 /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
+		073D4FFB154F6A12007773C9 /* tinymt32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tinymt32.c; sourceTree = "<group>"; };
+		073D4FFC154F6A12007773C9 /* tinymt32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinymt32.h; sourceTree = "<group>"; };
+		073D4FFE154F6A12007773C9 /* KWLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLayer.h; sourceTree = "<group>"; };
+		073D4FFF154F6A12007773C9 /* KWLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLayer.m; sourceTree = "<group>"; };
+		073D5000154F6A12007773C9 /* KWState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWState.h; sourceTree = "<group>"; };
+		073D5001154F6A12007773C9 /* KWState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWState.m; sourceTree = "<group>"; };
+		073D5002154F6A12007773C9 /* KWStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWStateManager.h; sourceTree = "<group>"; };
+		073D5003154F6A12007773C9 /* KWStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWStateManager.m; sourceTree = "<group>"; };
+		073D5005154F6A12007773C9 /* CCSpriteExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtension.h; sourceTree = "<group>"; };
+		073D5006154F6A12007773C9 /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
+		073D5007154F6A12007773C9 /* KWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWAnimation.h; sourceTree = "<group>"; };
+		073D5008154F6A12007773C9 /* KWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWAnimation.m; sourceTree = "<group>"; };
+		073D5009154F6A12007773C9 /* KWGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGauge.h; sourceTree = "<group>"; };
+		073D500A154F6A12007773C9 /* KWGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGauge.m; sourceTree = "<group>"; };
+		073D500B154F6A12007773C9 /* KWMessageWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMessageWindow.h; sourceTree = "<group>"; };
+		073D500C154F6A12007773C9 /* KWMessageWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMessageWindow.m; sourceTree = "<group>"; };
+		073D500D154F6A12007773C9 /* KWMessageWindowDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMessageWindowDelegate.h; sourceTree = "<group>"; };
+		073D500E154F6A12007773C9 /* KWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPieChart.h; sourceTree = "<group>"; };
+		073D500F154F6A12007773C9 /* KWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPieChart.m; sourceTree = "<group>"; };
+		073D5010154F6A12007773C9 /* KWScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWScrollLayer.h; sourceTree = "<group>"; };
+		073D5011154F6A12007773C9 /* KWScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWScrollLayer.m; sourceTree = "<group>"; };
+		073D5012154F6A12007773C9 /* KWShadowLabelTTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWShadowLabelTTF.h; sourceTree = "<group>"; };
+		073D5013154F6A12007773C9 /* KWShadowLabelTTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWShadowLabelTTF.m; sourceTree = "<group>"; };
+		073D5014154F6A12007773C9 /* KWTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimerLabel.h; sourceTree = "<group>"; };
+		073D5015154F6A12007773C9 /* KWTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimerLabel.m; sourceTree = "<group>"; };
+		073D5017154F6A12007773C9 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
+		073D5018154F6A12007773C9 /* KWDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWDrawingPrimitives.m; sourceTree = "<group>"; };
+		073D5019154F6A12007773C9 /* KWRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWRandom.h; sourceTree = "<group>"; };
+		073D501A154F6A12007773C9 /* KWRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWRandom.m; sourceTree = "<group>"; };
+		073D501B154F6A12007773C9 /* KWSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSingleton.h; sourceTree = "<group>"; };
+		073D501C154F6A12007773C9 /* KWSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSingleton.m; sourceTree = "<group>"; };
+		073D501D154F6A12007773C9 /* KWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimer.h; sourceTree = "<group>"; };
+		073D501E154F6A12007773C9 /* KWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimer.m; sourceTree = "<group>"; };
+		073D501F154F6A12007773C9 /* KWUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWUtility.h; sourceTree = "<group>"; };
+		073D5020154F6A12007773C9 /* KWUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWUtility.m; sourceTree = "<group>"; };
+		073D5021154F6A12007773C9 /* KWVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWVector.h; sourceTree = "<group>"; };
+		073D5022154F6A12007773C9 /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWVector.m; sourceTree = "<group>"; };
+		073D5023154F6A12007773C9 /* NSArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExtension.h; sourceTree = "<group>"; };
+		073D5024154F6A12007773C9 /* NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtension.m; sourceTree = "<group>"; };
+		073D5025154F6A12007773C9 /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
+		073D5027154F6A12007773C9 /* graphic_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = graphic_converter.py; sourceTree = "<group>"; };
+		073D5028154F6A12007773C9 /* sound_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = sound_converter.py; sourceTree = "<group>"; };
+		073D5042154F6CB2007773C9 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
+		073D5043154F6CB2007773C9 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,13 +196,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		073D4FF1154F65C8007773C9 /* MainLayer */ = {
+		073D4FF1154F65C8007773C9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				073D5042154F6CB2007773C9 /* HelloWorldLayer.h */,
+				073D5043154F6CB2007773C9 /* HelloWorldLayer.m */,
 				073D4FEE154F65C0007773C9 /* MainLayer.h */,
 				073D4FEF154F65C0007773C9 /* MainLayer.m */,
 			);
-			name = MainLayer;
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		073D4FF3154F6A12007773C9 /* Heqet */ = {
+			isa = PBXGroup;
+			children = (
+				073D4FF4154F6A12007773C9 /* .gitignore */,
+				073D4FF5154F6A12007773C9 /* Heqet */,
+				073D5025154F6A12007773C9 /* README.rst */,
+				073D5026154F6A12007773C9 /* util */,
+			);
+			path = Heqet;
+			sourceTree = "<group>";
+		};
+		073D4FF5154F6A12007773C9 /* Heqet */ = {
+			isa = PBXGroup;
+			children = (
+				073D4FF6154F6A12007773C9 /* audio */,
+				073D4FF9154F6A12007773C9 /* heqet.h */,
+				073D4FFA154F6A12007773C9 /* libs */,
+				073D4FFD154F6A12007773C9 /* scene */,
+				073D5004154F6A12007773C9 /* sprite */,
+				073D5016154F6A12007773C9 /* util */,
+			);
+			path = Heqet;
+			sourceTree = "<group>";
+		};
+		073D4FF6154F6A12007773C9 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				073D4FF7154F6A12007773C9 /* KWMusicManager.h */,
+				073D4FF8154F6A12007773C9 /* KWMusicManager.m */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		073D4FFA154F6A12007773C9 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				073D4FFB154F6A12007773C9 /* tinymt32.c */,
+				073D4FFC154F6A12007773C9 /* tinymt32.h */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		073D4FFD154F6A12007773C9 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				073D4FFE154F6A12007773C9 /* KWLayer.h */,
+				073D4FFF154F6A12007773C9 /* KWLayer.m */,
+				073D5000154F6A12007773C9 /* KWState.h */,
+				073D5001154F6A12007773C9 /* KWState.m */,
+				073D5002154F6A12007773C9 /* KWStateManager.h */,
+				073D5003154F6A12007773C9 /* KWStateManager.m */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		073D5004154F6A12007773C9 /* sprite */ = {
+			isa = PBXGroup;
+			children = (
+				073D5005154F6A12007773C9 /* CCSpriteExtension.h */,
+				073D5006154F6A12007773C9 /* CCSpriteExtension.m */,
+				073D5007154F6A12007773C9 /* KWAnimation.h */,
+				073D5008154F6A12007773C9 /* KWAnimation.m */,
+				073D5009154F6A12007773C9 /* KWGauge.h */,
+				073D500A154F6A12007773C9 /* KWGauge.m */,
+				073D500B154F6A12007773C9 /* KWMessageWindow.h */,
+				073D500C154F6A12007773C9 /* KWMessageWindow.m */,
+				073D500D154F6A12007773C9 /* KWMessageWindowDelegate.h */,
+				073D500E154F6A12007773C9 /* KWPieChart.h */,
+				073D500F154F6A12007773C9 /* KWPieChart.m */,
+				073D5010154F6A12007773C9 /* KWScrollLayer.h */,
+				073D5011154F6A12007773C9 /* KWScrollLayer.m */,
+				073D5012154F6A12007773C9 /* KWShadowLabelTTF.h */,
+				073D5013154F6A12007773C9 /* KWShadowLabelTTF.m */,
+				073D5014154F6A12007773C9 /* KWTimerLabel.h */,
+				073D5015154F6A12007773C9 /* KWTimerLabel.m */,
+			);
+			path = sprite;
+			sourceTree = "<group>";
+		};
+		073D5016154F6A12007773C9 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				073D5017154F6A12007773C9 /* KWDrawingPrimitives.h */,
+				073D5018154F6A12007773C9 /* KWDrawingPrimitives.m */,
+				073D5019154F6A12007773C9 /* KWRandom.h */,
+				073D501A154F6A12007773C9 /* KWRandom.m */,
+				073D501B154F6A12007773C9 /* KWSingleton.h */,
+				073D501C154F6A12007773C9 /* KWSingleton.m */,
+				073D501D154F6A12007773C9 /* KWTimer.h */,
+				073D501E154F6A12007773C9 /* KWTimer.m */,
+				073D501F154F6A12007773C9 /* KWUtility.h */,
+				073D5020154F6A12007773C9 /* KWUtility.m */,
+				073D5021154F6A12007773C9 /* KWVector.h */,
+				073D5022154F6A12007773C9 /* KWVector.m */,
+				073D5023154F6A12007773C9 /* NSArrayExtension.h */,
+				073D5024154F6A12007773C9 /* NSArrayExtension.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		073D5026154F6A12007773C9 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				073D5027154F6A12007773C9 /* graphic_converter.py */,
+				073D5028154F6A12007773C9 /* sound_converter.py */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		DCC1A0D613A94EC0005BD75D = {
@@ -155,6 +339,7 @@
 		DCC1A0E613A94ED5005BD75D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				073D4FF3154F6A12007773C9 /* Heqet */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,7 +372,7 @@
 		DCC1A38C13A94F1A005BD75D /* Projectfiles */ = {
 			isa = PBXGroup;
 			children = (
-				073D4FF1154F65C8007773C9 /* MainLayer */,
+				073D4FF1154F65C8007773C9 /* Scene */,
 				DCC1A38D13A94F1A005BD75D /* AppDelegate.h */,
 				DCC1A38E13A94F1A005BD75D /* AppDelegate.m */,
 				DCC1A39413A94F1A005BD75D /* Resources */,
@@ -306,6 +491,10 @@
 				DCC1A10813A94ED5005BD75D /* Icon@2x.png in Resources */,
 				DCC1A10B13A94ED5005BD75D /* iTunesArtwork in Resources */,
 				DCC1A3AF13A94F1A005BD75D /* config.lua in Resources */,
+				073D5029154F6A12007773C9 /* .gitignore in Resources */,
+				073D503E154F6A12007773C9 /* README.rst in Resources */,
+				073D503F154F6A12007773C9 /* graphic_converter.py in Resources */,
+				073D5040154F6A12007773C9 /* sound_converter.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,9 +513,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073D5052154F6DF0007773C9 /* HelloWorldLayer.m in Sources */,
 				DCC1A3A913A94F1A005BD75D /* AppDelegate.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
 				073D4FF0154F65C0007773C9 /* MainLayer.m in Sources */,
+				073D502A154F6A12007773C9 /* KWMusicManager.m in Sources */,
+				073D502B154F6A12007773C9 /* tinymt32.c in Sources */,
+				073D502C154F6A12007773C9 /* KWLayer.m in Sources */,
+				073D502D154F6A12007773C9 /* KWState.m in Sources */,
+				073D502E154F6A12007773C9 /* KWStateManager.m in Sources */,
+				073D502F154F6A12007773C9 /* CCSpriteExtension.m in Sources */,
+				073D5030154F6A12007773C9 /* KWAnimation.m in Sources */,
+				073D5031154F6A12007773C9 /* KWGauge.m in Sources */,
+				073D5032154F6A12007773C9 /* KWMessageWindow.m in Sources */,
+				073D5033154F6A12007773C9 /* KWPieChart.m in Sources */,
+				073D5034154F6A12007773C9 /* KWScrollLayer.m in Sources */,
+				073D5035154F6A12007773C9 /* KWShadowLabelTTF.m in Sources */,
+				073D5036154F6A12007773C9 /* KWTimerLabel.m in Sources */,
+				073D5037154F6A12007773C9 /* KWDrawingPrimitives.m in Sources */,
+				073D5038154F6A12007773C9 /* KWRandom.m in Sources */,
+				073D5039154F6A12007773C9 /* KWSingleton.m in Sources */,
+				073D503A154F6A12007773C9 /* KWTimer.m in Sources */,
+				073D503B154F6A12007773C9 /* KWUtility.m in Sources */,
+				073D503C154F6A12007773C9 /* KWVector.m in Sources */,
+				073D503D154F6A12007773C9 /* NSArrayExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,10 +568,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../__Kobold2D__/libs/GoogleAdMobAdsSDK\"",
 				);
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -369,10 +581,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90F013B4F811009DD35A /* BuildSettings-Release-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../__Kobold2D__/libs/GoogleAdMobAdsSDK\"",
 				);
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
