@@ -11,7 +11,8 @@
 
 typedef enum {
   DirectionLeft,
-  DirectionRight
+  DirectionRight,
+  DirectionUp
 } Direction;
 
 @interface Enemy : CCSprite

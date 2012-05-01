@@ -38,6 +38,7 @@
     CCMenu* menu = [CCMenu menuWithItems:items[0], items[1], items[2], nil];
     [menu alignItemsHorizontally];
     [self addChild:menu];
+    menu.position = ccp(menu.position.x, 180);
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
   }

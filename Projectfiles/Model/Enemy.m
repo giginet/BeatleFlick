@@ -36,7 +36,7 @@
     int y = 400;
     self.position = ccp(x, y);
     [self runAction:[CCSequence actions:
-                     [CCMoveTo actionWithDuration:5 position:ccp(centerX, 380)],
+                     [CCMoveTo actionWithDuration:5 position:ccp(centerX, 300)],
                      [CCCallFunc actionWithTarget:self selector:@selector(onReachToCenter)],
                      nil]];
   }
