@@ -39,4 +39,17 @@
   [commands_ removeAllObjects];
 }
 
+- (void)printStack {
+  for (Command* com in commands_) {
+    if (com.type == CommandTypeCircle) {
+      NSLog(@"red");
+    } else if (com.type == CommandTypeSquare) {
+      NSLog(@"blue");
+    } else {
+      NSLog(@"yellow");
+    }
+  }
+  NSLog(@"----------");
+}
+
 @end

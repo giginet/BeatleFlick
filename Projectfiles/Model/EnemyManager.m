@@ -19,7 +19,7 @@
 - (id)init {
   self = [super init];
   if (self) {
-    enemies_ = [NSArray array];
+    enemies_ = [NSMutableArray array];
     random_ = [KWRandom random];
   }
   return self;
@@ -31,11 +31,12 @@
     CommandTypeSquare, 
     CommandTypeTriangle
   };
-  int idx = [random_ nextInt] % 3;
+  int idx = [random_ nextIntFrom:0 to:2];
   CommandType type = types[idx];
   NSString* filename = [self filenameWithType:@"enemy" type:type];
   Enemy* enemy = [[Enemy alloc] initWithFile:filename type:type direction:direction];
   enemy.manager = self;
+  [enemies_ addObject:enemy];
   return enemy;
 }
 
@@ -68,7 +69,7 @@
 }
 
 - (BOOL)removeEnemy:(Enemy *)enemy {
-  if ([self.enemies indexOfObject:enemy]) {
+  if ([self.enemies containsObject:enemy]) {
     [enemies_ removeObject:enemy];
     return YES;
   }

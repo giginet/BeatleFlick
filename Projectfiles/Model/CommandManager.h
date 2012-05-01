@@ -18,5 +18,6 @@
 - (void)pushCommand:(CommandType)type;
 - (Command*)popCommand;
 - (void)clearCommands;
+- (void)printStack;
 
 @end

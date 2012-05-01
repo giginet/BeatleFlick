@@ -11,6 +11,8 @@
 
 @interface MainLayer()
 - (void)pressButton:(CommandType)type;
+- (void)pollFlick;
+- (void)attackTo:(Direction)dir;
 @end
 
 @implementation MainLayer
@@ -20,6 +22,7 @@
 - (id)init {
   self = [super init];
   if (self) {
+    lastSwipeDirection_ = -1;
     KKInput* input = [KKInput sharedInput];
     input.gestureSwipeEnabled = YES;
     CommandType types[] = {CommandTypeCircle, CommandTypeSquare, CommandTypeTriangle};
@@ -41,6 +44,7 @@
     menu.position = ccp(menu.position.x, 180);
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
+    self.isTouchEnabled = YES;
   }
   return self;
 }
@@ -50,24 +54,7 @@
 }
 
 - (void)update:(ccTime)dt {
-  KKInput* input = [KKInput sharedInput];
-  if (input.gesturesAvailable) {
-    KKSwipeGestureDirection dir = input.gestureSwipeDirection;
-    switch (dir) {
-      case KKSwipeGestureDirectionUp:
-        NSLog(@"up");
-        break;
-      case KKSwipeGestureDirectionRight:
-        NSLog(@"Right");
-        break;
-      case KKSwipeGestureDirectionDown:
-        NSLog(@"Down");
-        break;
-      case KKSwipeGestureDirectionLeft:
-        NSLog(@"Left");
-        break;
-    }
-  }
+  [self pollFlick];
   Enemy* enemy = [enemyManager lotPopEnemy];
   if (enemy) {
     [self addChild:enemy];
@@ -77,6 +64,51 @@
 - (void)pressButton:(CommandType)type {
   [manager pushCommand:type];
   NSLog(@"%d", [manager.commands count]);
+}
+
+- (void)pollFlick {
+  KKInput* input = [KKInput sharedInput];
+  if (input.gesturesAvailable) {
+    KKSwipeGestureDirection dir = input.gestureSwipeDirection;
+    if (lastSwipeDirection_ != dir) {
+      if (dir == KKSwipeGestureDirectionLeft || dir == KKSwipeGestureDirectionRight) {
+        [manager printStack];
+        Direction d = dir == KKSwipeGestureDirectionLeft ? DirectionLeft : DirectionRight;
+        int count = (int)[manager.commands count];
+        for (int i = 0; i < count; ++i) {
+          [self attackTo:d];
+        }
+      }
+    }
+    lastSwipeDirection_ = dir;
+  }
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+  lastPosition_ = [self convertTouchToNodeSpace:touch];
+  return YES;
+}
+
+- (void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
+  CGPoint currentPosition = [self convertTouchToNodeSpace:touch];
+  if (ccpDistance(currentPosition, lastPosition_) < 5) {
+    lastSwipeDirection_ = -1;
+  }
+  lastPosition_ = currentPosition;
+}
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
+  lastSwipeDirection_ = -1;
+}
+
+- (void)attackTo:(Direction)dir {
+  Command* command = [self.manager popCommand];
+  BOOL result = [enemyManager attackEnemy:dir type:command.type];
+  if (result) {
+    NSLog(@"hit");
+  } else {
+    NSLog(@"not hit");
+  }
 }
 
 @end

@@ -10,7 +10,10 @@
 #import "CommandManager.h"
 #import "EnemyManager.h"
 
-@interface MainLayer : KWLayer
+@interface MainLayer : KWLayer {
+  KKSwipeGestureDirection lastSwipeDirection_;
+  CGPoint lastPosition_;
+}
 
 @property(readonly, strong) CommandManager* manager;
 @property(readonly, strong) EnemyManager* enemyManager;
