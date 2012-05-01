@@ -15,6 +15,7 @@
 
 @implementation MainLayer
 @synthesize manager;
+@synthesize enemyManager;
 
 - (id)init {
   self = [super init];
@@ -38,6 +39,7 @@
     [menu alignItemsHorizontally];
     [self addChild:menu];
     manager = [[CommandManager alloc] init];
+    enemyManager = [[EnemyManager alloc] init];
   }
   return self;
 }
@@ -64,6 +66,10 @@
         NSLog(@"Left");
         break;
     }
+  }
+  Enemy* enemy = [enemyManager lotPopEnemy];
+  if (enemy) {
+    [self addChild:enemy];
   }
 }
 

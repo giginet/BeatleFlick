@@ -8,9 +8,11 @@
 
 #import "heqet.h"
 #import "CommandManager.h"
+#import "EnemyManager.h"
 
 @interface MainLayer : KWLayer
 
 @property(readonly, strong) CommandManager* manager;
+@property(readonly, strong) EnemyManager* enemyManager;
 
 @end

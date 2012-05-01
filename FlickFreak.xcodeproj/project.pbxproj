@@ -40,6 +40,8 @@
 		07A5DCDF154F9DBD00021112 /* enemy0.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCD9154F9DBD00021112 /* enemy0.png */; };
 		07A5DCE0154F9DBD00021112 /* enemy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCDA154F9DBD00021112 /* enemy1.png */; };
 		07A5DCE1154F9DBD00021112 /* enemy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCDB154F9DBD00021112 /* enemy2.png */; };
+		07A5DCE415501AD300021112 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCE315501AD300021112 /* Enemy.m */; };
+		07A5DCE71550409D00021112 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCE61550409D00021112 /* EnemyManager.m */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -133,6 +135,10 @@
 		07A5DCD9154F9DBD00021112 /* enemy0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy0.png; sourceTree = "<group>"; };
 		07A5DCDA154F9DBD00021112 /* enemy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy1.png; sourceTree = "<group>"; };
 		07A5DCDB154F9DBD00021112 /* enemy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy2.png; sourceTree = "<group>"; };
+		07A5DCE215501AD300021112 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy.h; path = Model/Enemy.h; sourceTree = "<group>"; };
+		07A5DCE315501AD300021112 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Enemy.m; path = Model/Enemy.m; sourceTree = "<group>"; };
+		07A5DCE51550409D00021112 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyManager.h; path = Model/EnemyManager.h; sourceTree = "<group>"; };
+		07A5DCE61550409D00021112 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyManager.m; path = Model/EnemyManager.m; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +342,10 @@
 				07A5DCD0154F8DBE00021112 /* Command.m */,
 				07A5DCD2154F8DCC00021112 /* CommandManager.h */,
 				07A5DCD3154F8DCC00021112 /* CommandManager.m */,
+				07A5DCE215501AD300021112 /* Enemy.h */,
+				07A5DCE315501AD300021112 /* Enemy.m */,
+				07A5DCE51550409D00021112 /* EnemyManager.h */,
+				07A5DCE61550409D00021112 /* EnemyManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -583,6 +593,8 @@
 				073D503D154F6A12007773C9 /* NSArrayExtension.m in Sources */,
 				07A5DCD1154F8DBE00021112 /* Command.m in Sources */,
 				07A5DCD4154F8DCC00021112 /* CommandManager.m in Sources */,
+				07A5DCE415501AD300021112 /* Enemy.m in Sources */,
+				07A5DCE71550409D00021112 /* EnemyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
