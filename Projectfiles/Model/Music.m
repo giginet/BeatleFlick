@@ -31,7 +31,7 @@
 
 - (void)play {
   [self.beatTimer play];
-  [self.track play];
+  [self.track playFile:self.filename loops:-1];
 }
 
 - (void)stop {

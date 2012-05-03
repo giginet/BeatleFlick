@@ -27,6 +27,11 @@
     CCDirector* director = [CCDirector sharedDirector];
     KKInput* input = [KKInput sharedInput];
     input.gestureSwipeEnabled = YES;
+    
+    CCSprite* background = [CCSprite spriteWithFile:@"background.png"];
+    background.position = director.screenCenter;
+    [self addChild:background];
+    
     buttons_ = [NSMutableArray array];
     for (int i = 0; i < 3; ++i) {
       NSString* filename = [NSString stringWithFormat:@"button%d.png", i];
@@ -35,7 +40,6 @@
       int width = button.contentSize.width;
       int margin = (director.screenSize.width - width * 3.0) / 4.0;
       float x = margin * (i + 1) + width * i + width * 0.5;
-      NSLog(@"%f", x);
       button.position = ccp(x, 180);
       [self addChild:button];
       [buttons_ addObject:button];
