@@ -44,6 +44,15 @@
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
+    beatTimer_ = [KWTimer timerWithMax:0.5];
+    beatTimer_.looping = YES;
+    [beatTimer_ play];
+    marker_ = [[Marker alloc] initWithRadius:50];
+    marker_.position = ccp(80, 60);
+    marker_.color = ccc4f(1, 0, 0, 1);
+    marker_.maxTime = beatTimer_.max;
+    
+    [self addChild:marker_];
   }
   return self;
 }
@@ -58,6 +67,7 @@
   if (enemy) {
     [self addChild:enemy];
   }
+  marker_.currentTime = beatTimer_.max - beatTimer_.now;
 }
 
 - (void)pressButton:(CommandType)type {

@@ -9,8 +9,11 @@
 #import "heqet.h"
 #import "CommandManager.h"
 #import "EnemyManager.h"
+#import "Marker.h"
 
 @interface MainLayer : KWLayer {
+  Marker* marker_;
+  KWTimer* beatTimer_;
 }
 
 @property(readonly, strong) CommandManager* manager;
