@@ -8,6 +8,7 @@
 
 #import "MainLayer.h"
 #import "Command.h"
+#import "CCNodeExtensions.h"
 
 @interface MainLayer()
 - (void)pressButton:(CommandType)type;
@@ -23,25 +24,22 @@
 - (id)init {
   self = [super init];
   if (self) {
+    CCDirector* director = [CCDirector sharedDirector];
     KKInput* input = [KKInput sharedInput];
     input.gestureSwipeEnabled = YES;
-    CommandType types[] = {CommandTypeCircle, CommandTypeSquare, CommandTypeTriangle};
-    CCMenuItem* items[3];
+    buttons_ = [NSMutableArray array];
     for (int i = 0; i < 3; ++i) {
       NSString* filename = [NSString stringWithFormat:@"button%d.png", i];
-      __block CommandType type = types[i];
-      __block MainLayer* layer = self;
-      CCMenuItemImage* item = [CCMenuItemImage itemFromNormalImage:filename 
-                                                     selectedImage:filename 
-                                                             block:^(id sender){
-                                                               [layer pressButton:type];
-      }];
-      items[i] = item;
+      CCSprite* button = [CCSprite spriteWithFile:filename];
+      button.tag = i;
+      int width = button.contentSize.width;
+      int margin = (director.screenSize.width - width * 3.0) / 4.0;
+      float x = margin * (i + 1) + width * i + width * 0.5;
+      NSLog(@"%f", x);
+      button.position = ccp(x, 180);
+      [self addChild:button];
+      [buttons_ addObject:button];
     }
-    CCMenu* menu = [CCMenu menuWithItems:items[0], items[1], items[2], nil];
-    [menu alignItemsHorizontally];
-    [self addChild:menu];
-    menu.position = ccp(menu.position.x, 180);
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
@@ -53,6 +51,7 @@
     
     [self addChild:marker_];
     [[OALSimpleAudio sharedInstance] preloadEffect:@"decide.caf"];
+    [[OALSimpleAudio sharedInstance] preloadEffect:@"flick.caf"];
   }
   return self;
 }
@@ -69,6 +68,15 @@
     [self addChild:enemy];
   }
   marker_.currentTime = self.music.remainToNextBeat;
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+  for (CCSprite* button in buttons_) {
+    if([button containsTouch:touch]){
+      [self pressButton:button.tag];
+    }
+  }
+  return YES;
 }
 
 - (void)pressButton:(CommandType)type {
@@ -90,6 +98,9 @@
           [self attackTo:d];
         }
       }
+      if ([self isCorrectBeat]) {
+        [[OALSimpleAudio sharedInstance] playEffect:@"flick.caf"];
+      }
     }
   }
 }
@@ -108,9 +119,9 @@
   float max = self.music.beatLength;
   float current = self.music.remainToNextBeat;
   float sub = max - current;
+  const float threshold = 0.2;
   NSLog(@"%f", sub);
-  const float threshold = 0.1;
-  return sub <= threshold || max - threshold < sub;
+  return sub <= threshold || (max - threshold) <= sub;
 }
 
 @end

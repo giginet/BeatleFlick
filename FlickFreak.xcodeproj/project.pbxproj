@@ -46,6 +46,7 @@
 		07D700C11552F62D0070B177 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700C01552F62D0070B177 /* Music.m */; };
 		07D700C21552FFB90070B177 /* sample.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700BE1552F5B50070B177 /* sample.caf */; };
 		07D700C5155304190070B177 /* decide.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C4155304190070B177 /* decide.caf */; };
+		07D700CA15530D440070B177 /* flick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C915530CD50070B177 /* flick.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -149,6 +150,7 @@
 		07D700BF1552F62D0070B177 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Music.h; path = Model/Music.h; sourceTree = "<group>"; };
 		07D700C01552F62D0070B177 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Model/Music.m; sourceTree = "<group>"; };
 		07D700C4155304190070B177 /* decide.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = decide.caf; sourceTree = "<group>"; };
+		07D700C915530CD50070B177 /* flick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flick.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -380,6 +382,7 @@
 		07D700C3155304190070B177 /* effect */ = {
 			isa = PBXGroup;
 			children = (
+				07D700C915530CD50070B177 /* flick.caf */,
 				07D700C4155304190070B177 /* decide.caf */,
 			);
 			path = effect;
@@ -554,6 +557,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D700CA15530D440070B177 /* flick.caf in Resources */,
 				07D700C21552FFB90070B177 /* sample.caf in Resources */,
 				DCC1A0FA13A94ED5005BD75D /* Default.png in Resources */,
 				DCC1A0FC13A94ED5005BD75D /* fps_images.png in Resources */,

@@ -14,6 +14,7 @@
 
 @interface MainLayer : KWLayer {
   Marker* marker_;
+  NSMutableArray* buttons_;
 }
 
 @property(readonly, strong) CommandManager* manager;
