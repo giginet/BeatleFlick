@@ -13,6 +13,8 @@
 @interface Music : NSObject
 
 @property(readonly) int bpm;
+@property(readonly) float beatLength;
+@property(readonly) float remainToNextBeat;
 @property(readonly) NSString* filename;
 @property(readonly) OALAudioTrack* track;
 @property(readonly) KWTimer* beatTimer;
@@ -20,6 +22,5 @@
 - (id)initWithFile:(NSString*)filename bpm:(int)bpm;
 - (void)play;
 - (void)stop;
-- (float)remainToNextBeat;
 
 @end

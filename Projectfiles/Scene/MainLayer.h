@@ -14,10 +14,12 @@
 
 @interface MainLayer : KWLayer {
   Marker* marker_;
-  Music* music_;
 }
 
 @property(readonly, strong) CommandManager* manager;
 @property(readonly, strong) EnemyManager* enemyManager;
+@property(readonly, strong) Music* music;
+
+- (BOOL)isCorrectBeat;
 
 @end

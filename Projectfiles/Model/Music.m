@@ -13,6 +13,8 @@
 @synthesize filename;
 @synthesize track;
 @synthesize beatTimer;
+@dynamic beatLength;
+@dynamic remainToNextBeat;
 
 - (id)initWithFile:(NSString *)fn bpm:(int)b {
   self = [super init];
@@ -21,7 +23,7 @@
     filename = fn;
     track = [OALAudioTrack track];
     [track preloadFile:fn];
-    beatTimer = [KWTimer timerWithMax:60.0 / bpm];
+    beatTimer = [KWTimer timerWithMax:self.beatLength];
     beatTimer.looping = YES;
   }
   return self;
@@ -35,6 +37,10 @@
 - (void)stop {
   [self.beatTimer stop];
   [self.track stop];
+}
+
+- (float)beatLength {
+  return 60.0 / self.bpm;
 }
 
 - (float)remainToNextBeat {

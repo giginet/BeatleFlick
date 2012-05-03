@@ -18,6 +18,7 @@
 @implementation MainLayer
 @synthesize manager;
 @synthesize enemyManager;
+@synthesize music;
 
 - (id)init {
   self = [super init];
@@ -44,20 +45,21 @@
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
-    music_ = [[Music alloc] initWithFile:@"sample.caf" bpm:126];
+    music = [[Music alloc] initWithFile:@"sample.caf" bpm:126];
     marker_ = [[Marker alloc] initWithRadius:50];
     marker_.position = ccp(80, 60);
     marker_.color = ccc4f(1, 0, 0, 1);
-    marker_.maxTime = music_.beatTimer.max;
+    marker_.maxTime = music.beatTimer.max;
     
     [self addChild:marker_];
+    [[OALSimpleAudio sharedInstance] preloadEffect:@"decide.caf"];
   }
   return self;
 }
 
 - (void)onEnter {
   [super onEnter];
-  [music_ play];
+  [self.music play];
 }
 
 - (void)update:(ccTime)dt {
@@ -66,12 +68,14 @@
   if (enemy) {
     [self addChild:enemy];
   }
-  marker_.currentTime = music_.remainToNextBeat;
+  marker_.currentTime = self.music.remainToNextBeat;
 }
 
 - (void)pressButton:(CommandType)type {
   [manager pushCommand:type];
-  NSLog(@"%d", [manager.commands count]);
+  if ([self isCorrectBeat]) {
+    [[OALSimpleAudio sharedInstance] playEffect:@"decide.caf"];
+  }
 }
 
 - (void)pollFlick {
@@ -98,6 +102,15 @@
   } else {
     NSLog(@"not hit");
   }
+}
+
+- (BOOL)isCorrectBeat {
+  float max = self.music.beatLength;
+  float current = self.music.remainToNextBeat;
+  float sub = max - current;
+  NSLog(@"%f", sub);
+  const float threshold = 0.1;
+  return sub <= threshold || max - threshold < sub;
 }
 
 @end
