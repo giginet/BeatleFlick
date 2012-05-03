@@ -44,13 +44,11 @@
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
-    beatTimer_ = [KWTimer timerWithMax:0.5];
-    beatTimer_.looping = YES;
-    [beatTimer_ play];
+    music_ = [[Music alloc] initWithFile:@"sample.caf" bpm:126];
     marker_ = [[Marker alloc] initWithRadius:50];
     marker_.position = ccp(80, 60);
     marker_.color = ccc4f(1, 0, 0, 1);
-    marker_.maxTime = beatTimer_.max;
+    marker_.maxTime = music_.beatTimer.max;
     
     [self addChild:marker_];
   }
@@ -59,6 +57,7 @@
 
 - (void)onEnter {
   [super onEnter];
+  [music_ play];
 }
 
 - (void)update:(ccTime)dt {
@@ -67,7 +66,7 @@
   if (enemy) {
     [self addChild:enemy];
   }
-  marker_.currentTime = beatTimer_.max - beatTimer_.now;
+  marker_.currentTime = music_.remainToNextBeat;
 }
 
 - (void)pressButton:(CommandType)type {

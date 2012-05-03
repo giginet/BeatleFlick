@@ -31,7 +31,7 @@
   [super draw];
   glColor4f(color.r, color.g, color.b, color.a);
   float rad = self.radius * (self.maxScale - 1) * (self.maxTime - self.currentTime) / self.maxTime;
-  ccDrawCircle(self.position, self.radius + rad, 0, 100, YES);
+  ccDrawCircle(self.position, self.radius + rad, 0, 100, NO);
   ccFillCircle(self.position, self.radius, 0, 100, YES);
 }
 

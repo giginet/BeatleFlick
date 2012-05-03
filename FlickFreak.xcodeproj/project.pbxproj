@@ -43,6 +43,8 @@
 		07A5DCE415501AD300021112 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCE315501AD300021112 /* Enemy.m */; };
 		07A5DCE71550409D00021112 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCE61550409D00021112 /* EnemyManager.m */; };
 		07D700BC1552E5110070B177 /* Marker.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700BB1552E5110070B177 /* Marker.m */; };
+		07D700C11552F62D0070B177 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700C01552F62D0070B177 /* Music.m */; };
+		07D700C21552FFB90070B177 /* sample.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700BE1552F5B50070B177 /* sample.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -142,6 +144,9 @@
 		07A5DCE61550409D00021112 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnemyManager.m; path = Model/EnemyManager.m; sourceTree = "<group>"; };
 		07D700BA1552E5110070B177 /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Marker.h; path = Model/Marker.h; sourceTree = "<group>"; };
 		07D700BB1552E5110070B177 /* Marker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Marker.m; path = Model/Marker.m; sourceTree = "<group>"; };
+		07D700BE1552F5B50070B177 /* sample.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample.caf; path = music/sample.caf; sourceTree = "<group>"; };
+		07D700BF1552F62D0070B177 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Music.h; path = Model/Music.h; sourceTree = "<group>"; };
+		07D700C01552F62D0070B177 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Model/Music.m; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -351,6 +356,8 @@
 				07A5DCE61550409D00021112 /* EnemyManager.m */,
 				07D700BA1552E5110070B177 /* Marker.h */,
 				07D700BB1552E5110070B177 /* Marker.m */,
+				07D700BF1552F62D0070B177 /* Music.h */,
+				07D700C01552F62D0070B177 /* Music.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -438,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				DCC1A39513A94F1A005BD75D /* config.lua */,
+				07D700BE1552F5B50070B177 /* sample.caf */,
 				07A5DCD5154F9DBD00021112 /* Image */,
 			);
 			path = Resources;
@@ -535,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D700C21552FFB90070B177 /* sample.caf in Resources */,
 				DCC1A0FA13A94ED5005BD75D /* Default.png in Resources */,
 				DCC1A0FC13A94ED5005BD75D /* fps_images.png in Resources */,
 				DCC1A0FE13A94ED5005BD75D /* Icon-72.png in Resources */,
@@ -601,6 +610,7 @@
 				07A5DCE415501AD300021112 /* Enemy.m in Sources */,
 				07A5DCE71550409D00021112 /* EnemyManager.m in Sources */,
 				07D700BC1552E5110070B177 /* Marker.m in Sources */,
+				07D700C11552F62D0070B177 /* Music.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

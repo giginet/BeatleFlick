@@ -10,10 +10,11 @@
 #import "CommandManager.h"
 #import "EnemyManager.h"
 #import "Marker.h"
+#import "Music.h"
 
 @interface MainLayer : KWLayer {
   Marker* marker_;
-  KWTimer* beatTimer_;
+  Music* music_;
 }
 
 @property(readonly, strong) CommandManager* manager;
