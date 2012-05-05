@@ -18,6 +18,8 @@ typedef enum {
 }
 
 @property(readonly) CommandType type;
+@property(readwrite) BOOL justBeat;
+@property(readwrite) float time;
 
 - (id)initWithCommandType:(CommandType)type;
 

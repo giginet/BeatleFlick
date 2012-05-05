@@ -10,11 +10,15 @@
 
 @implementation Command
 @synthesize type;
+@synthesize justBeat;
+@synthesize time;
 
 - (id)initWithCommandType:(CommandType)t {
   self = [super init];
   if (self) {
     type = t;
+    justBeat = NO;
+    time = 0;
   }
   return self;
 }

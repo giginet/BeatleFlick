@@ -23,6 +23,6 @@
 @property(readonly, strong) EnemyManager* enemyManager;
 @property(readonly, strong) Music* music;
 
-- (BOOL)isCorrectBeat;
+- (BOOL)isJustBeat;
 
 @end

@@ -47,7 +47,7 @@
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
-    music = [[Music alloc] initWithFile:@"sample.caf" bpm:126];
+    music = [[Music alloc] initWithFile:@"stage1.caf" bpm:130];
     marker_ = [[Marker alloc] initWithRadius:50];
     marker_.position = ccp(80, 60);
     marker_.color = ccc4f(1, 0, 0, 1);
@@ -87,7 +87,7 @@
 
 - (void)pressButton:(CommandType)type {
   [manager pushCommand:type];
-  if ([self isCorrectBeat]) {
+  if ([self isJustBeat]) {
     [[OALSimpleAudio sharedInstance] playEffect:@"decide.caf"];
     player_.combo += 1;
   } else {
@@ -107,7 +107,7 @@
           [self attackTo:d];
         }
       }
-      if ([self isCorrectBeat]) {
+      if ([self isJustBeat]) {
         [[OALSimpleAudio sharedInstance] playEffect:@"flick.caf"];
         player_.combo += 1;
       } else {
@@ -127,7 +127,7 @@
   }
 }
 
-- (BOOL)isCorrectBeat {
+- (BOOL)isJustBeat {
   float max = self.music.beatLength;
   float current = self.music.remainToNextBeat;
   float sub = max - current;
