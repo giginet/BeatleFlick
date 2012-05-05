@@ -11,10 +11,12 @@
 #import "EnemyManager.h"
 #import "Marker.h"
 #import "Music.h"
+#import "Player.h"
 
 @interface MainLayer : KWLayer {
-  Marker* marker_;
   NSMutableArray* buttons_;
+  Marker* marker_;
+  Player* player_;
 }
 
 @property(readonly, strong) CommandManager* manager;

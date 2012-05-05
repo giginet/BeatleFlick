@@ -56,6 +56,8 @@
     [self addChild:marker_];
     [[OALSimpleAudio sharedInstance] preloadEffect:@"decide.caf"];
     [[OALSimpleAudio sharedInstance] preloadEffect:@"flick.caf"];
+    
+    player_ = [Player spriteWithFile:@"button0.png"];
   }
   return self;
 }
@@ -87,6 +89,9 @@
   [manager pushCommand:type];
   if ([self isCorrectBeat]) {
     [[OALSimpleAudio sharedInstance] playEffect:@"decide.caf"];
+    player_.combo += 1;
+  } else {
+    player_.combo = 0;
   }
 }
 
@@ -104,6 +109,9 @@
       }
       if ([self isCorrectBeat]) {
         [[OALSimpleAudio sharedInstance] playEffect:@"flick.caf"];
+        player_.combo += 1;
+      } else {
+        player_.combo = 0;
       }
     }
   }
@@ -123,7 +131,7 @@
   float max = self.music.beatLength;
   float current = self.music.remainToNextBeat;
   float sub = max - current;
-  const float threshold = 0.2;
+  const float threshold = 0.15;
   NSLog(@"%f", sub);
   return sub <= threshold || (max - threshold) <= sub;
 }

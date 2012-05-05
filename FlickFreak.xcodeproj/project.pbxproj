@@ -48,6 +48,7 @@
 		07D700C5155304190070B177 /* decide.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C4155304190070B177 /* decide.caf */; };
 		07D700CA15530D440070B177 /* flick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C915530CD50070B177 /* flick.caf */; };
 		07D700CC15530EDF0070B177 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700CB15530EDF0070B177 /* background.png */; };
+		07D700CF1554E8DE0070B177 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700CE1554E8DE0070B177 /* Player.m */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -153,6 +154,8 @@
 		07D700C4155304190070B177 /* decide.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = decide.caf; sourceTree = "<group>"; };
 		07D700C915530CD50070B177 /* flick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flick.caf; sourceTree = "<group>"; };
 		07D700CB15530EDF0070B177 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		07D700CD1554E8DE0070B177 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		07D700CE1554E8DE0070B177 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +367,8 @@
 				07D700BB1552E5110070B177 /* Marker.m */,
 				07D700BF1552F62D0070B177 /* Music.h */,
 				07D700C01552F62D0070B177 /* Music.m */,
+				07D700CD1554E8DE0070B177 /* Player.h */,
+				07D700CE1554E8DE0070B177 /* Player.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -631,6 +636,7 @@
 				07A5DCE71550409D00021112 /* EnemyManager.m in Sources */,
 				07D700BC1552E5110070B177 /* Marker.m in Sources */,
 				07D700C11552F62D0070B177 /* Music.m in Sources */,
+				07D700CF1554E8DE0070B177 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
