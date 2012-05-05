@@ -17,7 +17,6 @@
 @property(readonly) float remainToNextBeat;
 @property(readonly) NSString* filename;
 @property(readonly) OALAudioTrack* track;
-@property(readonly) KWTimer* beatTimer;
 
 - (id)initWithFile:(NSString*)filename bpm:(int)bpm;
 - (void)play;

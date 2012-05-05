@@ -51,7 +51,7 @@
     marker_ = [[Marker alloc] initWithRadius:50];
     marker_.position = ccp(80, 60);
     marker_.color = ccc4f(1, 0, 0, 1);
-    marker_.maxTime = music.beatTimer.max;
+    marker_.maxTime = music.beatLength;
     
     [self addChild:marker_];
     [[OALSimpleAudio sharedInstance] preloadEffect:@"decide.caf"];
@@ -131,7 +131,7 @@
   float max = self.music.beatLength;
   float current = self.music.remainToNextBeat;
   float sub = max - current;
-  const float threshold = 0.15;
+  const float threshold = 0.20;
   NSLog(@"%f", sub);
   return sub <= threshold || (max - threshold) <= sub;
 }

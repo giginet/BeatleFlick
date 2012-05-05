@@ -12,7 +12,6 @@
 @synthesize bpm;
 @synthesize filename;
 @synthesize track;
-@synthesize beatTimer;
 @dynamic beatLength;
 @dynamic remainToNextBeat;
 
@@ -23,19 +22,15 @@
     filename = fn;
     track = [OALAudioTrack track];
     [track preloadFile:fn];
-    beatTimer = [KWTimer timerWithMax:self.beatLength];
-    beatTimer.looping = YES;
   }
   return self;
 }
 
 - (void)play {
-  [self.beatTimer play];
   [self.track playFile:self.filename loops:-1];
 }
 
 - (void)stop {
-  [self.beatTimer stop];
   [self.track stop];
 }
 
@@ -44,7 +39,9 @@
 }
 
 - (float)remainToNextBeat {
-  return self.beatTimer.max - self.beatTimer.now;
+  float current = self.track.currentTime;
+  int nextBeat = ceil(current / self.beatLength);
+  return (nextBeat * self.beatLength) - current;
 }
 
 @end
