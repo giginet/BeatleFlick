@@ -21,6 +21,9 @@
   if (self) {
     bullets = array;
     time = t;
+    for (Bullet* bullet in self.bullets) {
+      bullet.shoot = self;
+    }
   }
   return self;
 }

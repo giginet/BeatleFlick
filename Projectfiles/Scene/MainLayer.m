@@ -145,7 +145,17 @@
 }
 
 - (void)attack:(Bullet *)bullet {
-  [[OALSimpleAudio sharedInstance] playEffect:@"attack.caf"];
+  NSArray* enemies = [self.enemyManager enemiesWithDirection:bullet.shoot.direction];
+  if ([enemies count] == 0) {
+  } else {
+    Enemy* enemy = [enemies objectAtIndex:0];
+    if (enemy.type == bullet.type) {
+      [self.enemyManager removeEnemy:enemy];
+      [[OALSimpleAudio sharedInstance] playEffect:@"attack.caf"];
+    } else {
+      [[OALSimpleAudio sharedInstance] playEffect:@"miss.caf"];
+    }
+  }
 }
 
 @end

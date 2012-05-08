@@ -8,14 +8,9 @@
 
 #import "CCSprite.h"
 #import "Bullet.h"
+#import "Direction.h"
 
 @class EnemyManager;
-
-typedef enum {
-  DirectionLeft,
-  DirectionRight,
-  DirectionUp
-} Direction;
 
 @interface Enemy : CCSprite
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Bullet.h"
-#import "Enemy.h"
+#import "Direction.h"
 
 @interface Shoot : NSObject {
   NSMutableArray* bullets_;

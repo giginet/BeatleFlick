@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Shoot;
+
 typedef enum {
   BulletTypeCircle,
   BulletTypeSquare,
@@ -22,6 +24,7 @@ typedef enum {
 @property(readonly) BulletType type;
 @property(readwrite) BOOL justBeat;
 @property(readwrite) float time;
+@property(readwrite, weak) Shoot* shoot;
 
 - (id)initWithBulletType:(BulletType)type;
 - (void)scheduleAttack:(id)target selector:(SEL)selector delay:(ccTime)delay;

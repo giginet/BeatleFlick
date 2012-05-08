@@ -71,6 +71,7 @@
 - (BOOL)removeEnemy:(Enemy *)enemy {
   if ([self.enemies containsObject:enemy]) {
     [enemies_ removeObject:enemy];
+    [enemy.parent removeChild:enemy cleanup:YES];
     return YES;
   }
   return NO;
@@ -78,6 +79,14 @@
 
 - (NSString*)filenameWithType:(NSString *)prefix type:(BulletType)type {
   return [NSString stringWithFormat:@"%@%d.png", prefix, type];
+}
+
+- (NSArray*)enemiesWithDirection:(Direction)dir {
+  __block Direction d = dir;
+  return [self.enemies filterUsingBlock:^BOOL(id obj, NSUInteger idx){
+    Enemy* enemy = (Enemy*)obj;
+    return d == enemy.direction;
+  }];
 }
 
 @end

@@ -54,6 +54,7 @@
 		07D700DB1558D5B70070B177 /* attack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700D91558D5930070B177 /* attack.caf */; };
 		07D700DC1558D5B70070B177 /* flick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700DA1558D5A50070B177 /* flick.caf */; };
 		07D700DE1558D8650070B177 /* just.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700DD1558D82D0070B177 /* just.caf */; };
+		07D700E11558DE2E0070B177 /* miss.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700E01558DE270070B177 /* miss.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -168,6 +169,8 @@
 		07D700D91558D5930070B177 /* attack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attack.caf; sourceTree = "<group>"; };
 		07D700DA1558D5A50070B177 /* flick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flick.caf; sourceTree = "<group>"; };
 		07D700DD1558D82D0070B177 /* just.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = just.caf; sourceTree = "<group>"; };
+		07D700DF1558DCEE0070B177 /* Direction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Direction.h; path = Model/Direction.h; sourceTree = "<group>"; };
+		07D700E01558DE270070B177 /* miss.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = miss.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +370,7 @@
 		07A5DCCE154F8D9700021112 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				07D700DF1558DCEE0070B177 /* Direction.h */,
 				07A5DCCF154F8DBE00021112 /* Bullet.h */,
 				07A5DCD0154F8DBE00021112 /* Bullet.m */,
 				07A5DCD2154F8DCC00021112 /* BulletManager.h */,
@@ -410,6 +414,7 @@
 				07D700D91558D5930070B177 /* attack.caf */,
 				07D700C4155304190070B177 /* decide.caf */,
 				07D700DA1558D5A50070B177 /* flick.caf */,
+				07D700E01558DE270070B177 /* miss.caf */,
 			);
 			path = effect;
 			sourceTree = "<group>";
@@ -584,6 +589,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D700E11558DE2E0070B177 /* miss.caf in Resources */,
 				07D700DE1558D8650070B177 /* just.caf in Resources */,
 				07D700DB1558D5B70070B177 /* attack.caf in Resources */,
 				07D700DC1558D5B70070B177 /* flick.caf in Resources */,

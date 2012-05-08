@@ -21,5 +21,6 @@
 - (Enemy*)lotPopEnemy;
 - (BOOL)attackEnemy:(Direction)dir type:(BulletType)type;
 - (BOOL)removeEnemy:(Enemy*)enemy;
+- (NSArray*)enemiesWithDirection:(Direction)dir;
 
 @end

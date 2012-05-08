@@ -12,6 +12,7 @@
 @synthesize type;
 @synthesize justBeat;
 @synthesize time;
+@synthesize shoot;
 
 - (id)initWithBulletType:(BulletType)t {
   self = [super init];
