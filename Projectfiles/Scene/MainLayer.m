@@ -7,8 +7,10 @@
 //
 
 #import "MainLayer.h"
-#import "Command.h"
 #import "CCNodeExtensions.h"
+
+#import "Command.h"
+#import "Shoot.h"
 
 @interface MainLayer()
 - (void)pressButton:(CommandType)type;
@@ -44,6 +46,9 @@
       [self addChild:button];
       [buttons_ addObject:button];
     }
+    
+    shoots_ = [NSMutableArray array];
+    
     manager = [[CommandManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
@@ -102,10 +107,8 @@
     if ([input gestureSwipeRecognizedThisFrame]) {
       if (dir == KKSwipeGestureDirectionLeft || dir == KKSwipeGestureDirectionRight) {        
         Direction d = dir == KKSwipeGestureDirectionLeft ? DirectionLeft : DirectionRight;
-        int count = (int)[manager.commands count];
-        for (int i = 0; i < count; ++i) {
-          [self attackTo:d];
-        }
+        Shoot* shoot = [self.manager shoot:d time:0];
+        [shoots_ addObject:shoot];
       }
       if ([self isJustBeat]) {
         [[OALSimpleAudio sharedInstance] playEffect:@"flick.caf"];

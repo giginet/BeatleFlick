@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Command.h"
+#import "Shoot.h"
 
 @interface CommandManager : NSObject {
   NSMutableArray* commands_;
@@ -19,5 +20,6 @@
 - (Command*)popCommand;
 - (void)clearCommands;
 - (void)printStack;
+- (Shoot*)shoot:(Direction)dir time:(float)time;
 
 @end

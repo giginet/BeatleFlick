@@ -11,6 +11,7 @@
 @implementation Shoot
 @synthesize commands;
 @synthesize time;
+@synthesize direction;
 
 - (id)initWithCommands:(NSArray *)array {
   self = [super init];

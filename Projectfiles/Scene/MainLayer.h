@@ -15,6 +15,7 @@
 
 @interface MainLayer : KWLayer {
   NSMutableArray* buttons_;
+  NSMutableArray* shoots_;
   Marker* marker_;
   Player* player_;
 }

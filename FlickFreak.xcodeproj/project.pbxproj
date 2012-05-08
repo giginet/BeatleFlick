@@ -51,6 +51,7 @@
 		07D700CF1554E8DE0070B177 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700CE1554E8DE0070B177 /* Player.m */; };
 		07D700D215550BC20070B177 /* Shoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700D115550BC20070B177 /* Shoot.m */; };
 		07D700D41555ECE60070B177 /* stage1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700D31555EC890070B177 /* stage1.caf */; };
+		07D700D7155613800070B177 /* GameTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700D6155613800070B177 /* GameTimer.m */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -161,6 +162,8 @@
 		07D700D015550BC20070B177 /* Shoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shoot.h; path = Model/Shoot.h; sourceTree = "<group>"; };
 		07D700D115550BC20070B177 /* Shoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shoot.m; path = Model/Shoot.m; sourceTree = "<group>"; };
 		07D700D31555EC890070B177 /* stage1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stage1.caf; path = music/stage1.caf; sourceTree = "<group>"; };
+		07D700D5155613800070B177 /* GameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameTimer.h; path = Model/GameTimer.h; sourceTree = "<group>"; };
+		07D700D6155613800070B177 /* GameTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameTimer.m; path = Model/GameTimer.m; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,6 +379,8 @@
 				07D700CE1554E8DE0070B177 /* Player.m */,
 				07D700D015550BC20070B177 /* Shoot.h */,
 				07D700D115550BC20070B177 /* Shoot.m */,
+				07D700D5155613800070B177 /* GameTimer.h */,
+				07D700D6155613800070B177 /* GameTimer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -647,6 +652,7 @@
 				07D700C11552F62D0070B177 /* Music.m in Sources */,
 				07D700CF1554E8DE0070B177 /* Player.m in Sources */,
 				07D700D215550BC20070B177 /* Shoot.m in Sources */,
+				07D700D7155613800070B177 /* GameTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

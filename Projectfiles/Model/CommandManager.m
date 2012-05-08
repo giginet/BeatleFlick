@@ -52,4 +52,11 @@
   NSLog(@"----------");
 }
 
+- (Shoot*)shoot:(Direction)dir time:(float)time {
+  Shoot* shoot = [[Shoot alloc] initWithCommands:self.commands];
+  [self clearCommands];
+  shoot.direction = dir;
+  return shoot;
+}
+
 @end
