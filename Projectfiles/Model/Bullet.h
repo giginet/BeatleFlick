@@ -23,6 +23,7 @@ typedef enum {
 
 @property(readonly) BulletType type;
 @property(readwrite) BOOL justBeat;
+@property(readonly) BOOL shooted;
 @property(readwrite) float time;
 @property(readwrite, weak) Shoot* shoot;
 

@@ -22,6 +22,7 @@
 @synthesize manager;
 @synthesize enemyManager;
 @synthesize music;
+@synthesize shoots = shoots_;
 
 - (id)init {
   self = [super init];
@@ -114,7 +115,7 @@
         Direction d = dir == KKSwipeGestureDirectionLeft ? DirectionLeft : DirectionRight;
         Shoot* shoot = [self.manager shoot:d time:timer_.time];
         [shoot scheduleAttacks:self selector:@selector(attack:) delay:self.music.beatLength];
-        [shoots_ addObject:shoot];
+        [self.shoots addObject:shoot];
       }
       if ([self isJustBeat]) {
         [[OALSimpleAudio sharedInstance] playEffect:@"flick.caf"];
@@ -155,6 +156,9 @@
     } else {
       [[OALSimpleAudio sharedInstance] playEffect:@"miss.caf"];
     }
+  }
+  if ([bullet.shoot isShooted]) {
+    [self.shoots removeObject:bullet.shoot];
   }
 }
 

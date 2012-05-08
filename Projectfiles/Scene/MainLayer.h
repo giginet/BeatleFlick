@@ -25,6 +25,7 @@
 @property(readonly, strong) BulletManager* manager;
 @property(readonly, strong) EnemyManager* enemyManager;
 @property(readonly, strong) Music* music;
+@property(readonly) NSMutableArray* shoots;
 
 - (BOOL)isJustBeat;
 - (void)attack:(Bullet*)bullet;

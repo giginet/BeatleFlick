@@ -13,6 +13,7 @@
 @synthesize justBeat;
 @synthesize time;
 @synthesize shoot;
+@synthesize shooted;
 
 - (id)initWithBulletType:(BulletType)t {
   self = [super init];
@@ -20,6 +21,7 @@
     type = t;
     justBeat = NO;
     time = 0;
+    shooted = NO;
   }
   return self;
 }
@@ -37,6 +39,7 @@
 
 - (void)attack {
   [target_ performSelector:selector_ withObject:self];
+  shooted = YES;
 }
 
 @end

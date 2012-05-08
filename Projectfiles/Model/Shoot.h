@@ -20,5 +20,6 @@
 
 - (id)initWithbullets:(NSArray*)array time:(float)time;
 - (void)scheduleAttacks:(id)target selector:(SEL)selector delay:(ccTime)delay;
+- (BOOL)isShooted;
 
 @end

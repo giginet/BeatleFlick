@@ -37,4 +37,13 @@
   }
 }
 
+- (BOOL)isShooted {
+  for (Bullet* bullet in self.bullets) {
+    if (!bullet.shooted) {
+      return NO;
+    }
+  }
+  return YES;
+}
+
 @end
