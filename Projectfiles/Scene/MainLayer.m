@@ -97,9 +97,10 @@
   BOOL isJustBeat = [self isJustBeat];
   [manager pushBullet:type time:timer_.time justBeat:isJustBeat];
   if (isJustBeat) {
-    [[OALSimpleAudio sharedInstance] playEffect:@"decide.caf"];
+    [[OALSimpleAudio sharedInstance] playEffect:@"just.caf"];
     player_.combo += 1;
   } else {
+    [[OALSimpleAudio sharedInstance] playEffect:@"decide.caf"];
     player_.combo = 0;
   }
 }
@@ -139,7 +140,7 @@
   float max = self.music.beatLength;
   float current = self.music.remainToNextBeat;
   float sub = max - current;
-  const float threshold = 0.20;
+  const float threshold = 0.15;
   return sub <= threshold || (max - threshold) <= sub;
 }
 
