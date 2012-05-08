@@ -19,6 +19,7 @@
 - (id)init {
   self = [super init];
   if (self) {
+    counter_ = 0;
     enemies_ = [NSMutableArray array];
     random_ = [KWRandom random];
   }
@@ -42,7 +43,8 @@
 
 - (Enemy*)lotPopEnemy {
   int r = [random_ nextInt];
-  if (r % 100 == 0) {
+  ++counter_;
+  if (counter_ % 75 == 0) {
     Direction dir;
     r = [random_ nextInt];
     if (r % 2 == 0) {

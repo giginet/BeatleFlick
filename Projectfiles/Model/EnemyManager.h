@@ -11,6 +11,7 @@
 #import "Enemy.h"
 
 @interface EnemyManager : NSObject {
+  int counter_;
   NSMutableArray* enemies_;
   KWRandom* random_;
 }
