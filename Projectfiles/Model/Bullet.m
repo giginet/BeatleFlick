@@ -23,4 +23,20 @@
   return self;
 }
 
+- (void)scheduleAttack:(id)target selector:(SEL)selector delay:(ccTime)delay {
+  target_ = target;
+  selector_ = selector;
+  NSLog(@"delay : %f", delay);
+  [[CCScheduler sharedScheduler] scheduleSelector:@selector(attack) 
+                                        forTarget:self 
+                                         interval:delay 
+                                           paused:NO 
+                                           repeat:0 
+                                            delay:0];
+}
+
+- (void)attack {
+  [target_ performSelector:selector_ withObject:self];
+}
+
 @end

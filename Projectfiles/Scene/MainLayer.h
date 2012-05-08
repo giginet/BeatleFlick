@@ -27,5 +27,6 @@
 @property(readonly, strong) Music* music;
 
 - (BOOL)isJustBeat;
+- (void)attack:(Bullet*)bullet;
 
 @end

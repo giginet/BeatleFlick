@@ -10,7 +10,7 @@
 
 @interface GameTimer : NSObject
 
-@property(readonly) float time;
+@property(readonly) ccTime time;
 @property(readonly) BOOL playing;
 
 - (void)play;

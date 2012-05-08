@@ -46,12 +46,13 @@
 		07D700C11552F62D0070B177 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700C01552F62D0070B177 /* Music.m */; };
 		07D700C21552FFB90070B177 /* sample.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700BE1552F5B50070B177 /* sample.caf */; };
 		07D700C5155304190070B177 /* decide.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C4155304190070B177 /* decide.caf */; };
-		07D700CA15530D440070B177 /* flick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C915530CD50070B177 /* flick.caf */; };
 		07D700CC15530EDF0070B177 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700CB15530EDF0070B177 /* background.png */; };
 		07D700CF1554E8DE0070B177 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700CE1554E8DE0070B177 /* Player.m */; };
 		07D700D215550BC20070B177 /* Shoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700D115550BC20070B177 /* Shoot.m */; };
 		07D700D41555ECE60070B177 /* stage1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700D31555EC890070B177 /* stage1.caf */; };
 		07D700D7155613800070B177 /* GameTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700D6155613800070B177 /* GameTimer.m */; };
+		07D700DB1558D5B70070B177 /* attack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700D91558D5930070B177 /* attack.caf */; };
+		07D700DC1558D5B70070B177 /* flick.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700DA1558D5A50070B177 /* flick.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -135,9 +136,9 @@
 		073D5025154F6A12007773C9 /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
 		073D5027154F6A12007773C9 /* graphic_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = graphic_converter.py; sourceTree = "<group>"; };
 		073D5028154F6A12007773C9 /* sound_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = sound_converter.py; sourceTree = "<group>"; };
-		07A5DCCF154F8DBE00021112 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; name = Bullet.h; path = Model/Bullet.h; sourceTree = "<group>"; };
+		07A5DCCF154F8DBE00021112 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Model/Bullet.h; sourceTree = "<group>"; };
 		07A5DCD0154F8DBE00021112 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Model/Bullet.m; sourceTree = "<group>"; };
-		07A5DCD2154F8DCC00021112 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; name = BulletManager.h; path = Model/BulletManager.h; sourceTree = "<group>"; };
+		07A5DCD2154F8DCC00021112 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BulletManager.h; path = Model/BulletManager.h; sourceTree = "<group>"; };
 		07A5DCD3154F8DCC00021112 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BulletManager.m; path = Model/BulletManager.m; sourceTree = "<group>"; };
 		07A5DCD6154F9DBD00021112 /* button0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button0.png; sourceTree = "<group>"; };
 		07A5DCD7154F9DBD00021112 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
@@ -155,7 +156,6 @@
 		07D700BF1552F62D0070B177 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Music.h; path = Model/Music.h; sourceTree = "<group>"; };
 		07D700C01552F62D0070B177 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Model/Music.m; sourceTree = "<group>"; };
 		07D700C4155304190070B177 /* decide.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = decide.caf; sourceTree = "<group>"; };
-		07D700C915530CD50070B177 /* flick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flick.caf; sourceTree = "<group>"; };
 		07D700CB15530EDF0070B177 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		07D700CD1554E8DE0070B177 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		07D700CE1554E8DE0070B177 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
@@ -164,6 +164,8 @@
 		07D700D31555EC890070B177 /* stage1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = stage1.caf; path = music/stage1.caf; sourceTree = "<group>"; };
 		07D700D5155613800070B177 /* GameTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameTimer.h; path = Model/GameTimer.h; sourceTree = "<group>"; };
 		07D700D6155613800070B177 /* GameTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameTimer.m; path = Model/GameTimer.m; sourceTree = "<group>"; };
+		07D700D91558D5930070B177 /* attack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = attack.caf; sourceTree = "<group>"; };
+		07D700DA1558D5A50070B177 /* flick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = flick.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,8 +404,9 @@
 		07D700C3155304190070B177 /* effect */ = {
 			isa = PBXGroup;
 			children = (
-				07D700C915530CD50070B177 /* flick.caf */,
+				07D700D91558D5930070B177 /* attack.caf */,
 				07D700C4155304190070B177 /* decide.caf */,
+				07D700DA1558D5A50070B177 /* flick.caf */,
 			);
 			path = effect;
 			sourceTree = "<group>";
@@ -578,8 +581,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D700DB1558D5B70070B177 /* attack.caf in Resources */,
+				07D700DC1558D5B70070B177 /* flick.caf in Resources */,
 				07D700D41555ECE60070B177 /* stage1.caf in Resources */,
-				07D700CA15530D440070B177 /* flick.caf in Resources */,
 				07D700C21552FFB90070B177 /* sample.caf in Resources */,
 				DCC1A0FA13A94ED5005BD75D /* Default.png in Resources */,
 				DCC1A0FC13A94ED5005BD75D /* fps_images.png in Resources */,

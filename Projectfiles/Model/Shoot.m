@@ -25,4 +25,13 @@
   return self;
 }
 
+- (void)scheduleAttacks:(id)target selector:(SEL)selector delay:(ccTime)delay {
+  if ([self.bullets count] == 0) return;
+  float first = [(Bullet*)[self.bullets objectAtIndex:0] time];
+  for (Bullet* bullet in self.bullets) {
+    float sub = bullet.time - first;
+    [bullet scheduleAttack:target selector:selector delay:(delay + sub)];
+  }
+}
+
 @end

@@ -15,6 +15,8 @@ typedef enum {
 } BulletType;
 
 @interface Bullet : NSObject {
+  id target_;
+  SEL selector_;
 }
 
 @property(readonly) BulletType type;
@@ -22,5 +24,7 @@ typedef enum {
 @property(readwrite) float time;
 
 - (id)initWithBulletType:(BulletType)type;
+- (void)scheduleAttack:(id)target selector:(SEL)selector delay:(ccTime)delay;
+- (void)attack;
 
 @end

@@ -111,8 +111,8 @@
     if ([input gestureSwipeRecognizedThisFrame]) {
       if (dir == KKSwipeGestureDirectionLeft || dir == KKSwipeGestureDirectionRight) {        
         Direction d = dir == KKSwipeGestureDirectionLeft ? DirectionLeft : DirectionRight;
-        Shoot* shoot = [self.manager shoot:d time:0];
-        shoot.time = timer_.time;
+        Shoot* shoot = [self.manager shoot:d time:timer_.time];
+        [shoot scheduleAttacks:self selector:@selector(attack:) delay:self.music.beatLength];
         [shoots_ addObject:shoot];
       }
       if ([self isJustBeat]) {
@@ -140,8 +140,11 @@
   float current = self.music.remainToNextBeat;
   float sub = max - current;
   const float threshold = 0.20;
-  NSLog(@"%f", sub);
   return sub <= threshold || (max - threshold) <= sub;
+}
+
+- (void)attack:(Bullet *)bullet {
+  [[OALSimpleAudio sharedInstance] playEffect:@"attack.caf"];
 }
 
 @end

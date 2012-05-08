@@ -55,7 +55,7 @@
 }
 
 - (Shoot*)shoot:(Direction)dir time:(float)time {
-  Shoot* shoot = [[Shoot alloc] initWithbullets:self.bullets time:time];
+  Shoot* shoot = [[Shoot alloc] initWithbullets:[NSArray arrayWithArray:self.bullets] time:time];
   [self clearBullets];
   shoot.direction = dir;
   return shoot;
