@@ -86,12 +86,23 @@
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+  int i = 0;
   for (CCSprite* button in buttons_) {
     if([button containsTouch:touch]){
+      [button setTexture:[[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"button%d_selected.png", i]]];
       [self pressButton:button.tag];
+      ++i;
     }
   }
   return YES;
+}
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event {
+  int i = 0;
+  for (CCSprite* button in buttons_) {
+    [button setTexture:[[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"button%d.png", i]]];
+    ++i;
+  }
 }
 
 - (void)pressButton:(BulletType)type {
