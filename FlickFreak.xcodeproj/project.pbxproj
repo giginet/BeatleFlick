@@ -32,8 +32,8 @@
 		073D503E154F6A12007773C9 /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = 073D5025154F6A12007773C9 /* README.rst */; };
 		073D503F154F6A12007773C9 /* graphic_converter.py in Resources */ = {isa = PBXBuildFile; fileRef = 073D5027154F6A12007773C9 /* graphic_converter.py */; };
 		073D5040154F6A12007773C9 /* sound_converter.py in Resources */ = {isa = PBXBuildFile; fileRef = 073D5028154F6A12007773C9 /* sound_converter.py */; };
-		07A5DCD1154F8DBE00021112 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCD0154F8DBE00021112 /* Command.m */; };
-		07A5DCD4154F8DCC00021112 /* CommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCD3154F8DCC00021112 /* CommandManager.m */; };
+		07A5DCD1154F8DBE00021112 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCD0154F8DBE00021112 /* Bullet.m */; };
+		07A5DCD4154F8DCC00021112 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCD3154F8DCC00021112 /* BulletManager.m */; };
 		07A5DCDC154F9DBD00021112 /* button0.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCD6154F9DBD00021112 /* button0.png */; };
 		07A5DCDD154F9DBD00021112 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCD7154F9DBD00021112 /* button1.png */; };
 		07A5DCDE154F9DBD00021112 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCD8154F9DBD00021112 /* button2.png */; };
@@ -135,10 +135,10 @@
 		073D5025154F6A12007773C9 /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
 		073D5027154F6A12007773C9 /* graphic_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = graphic_converter.py; sourceTree = "<group>"; };
 		073D5028154F6A12007773C9 /* sound_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = sound_converter.py; sourceTree = "<group>"; };
-		07A5DCCF154F8DBE00021112 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Command.h; path = Model/Command.h; sourceTree = "<group>"; };
-		07A5DCD0154F8DBE00021112 /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Command.m; path = Model/Command.m; sourceTree = "<group>"; };
-		07A5DCD2154F8DCC00021112 /* CommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandManager.h; path = Model/CommandManager.h; sourceTree = "<group>"; };
-		07A5DCD3154F8DCC00021112 /* CommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandManager.m; path = Model/CommandManager.m; sourceTree = "<group>"; };
+		07A5DCCF154F8DBE00021112 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; name = Bullet.h; path = Model/Bullet.h; sourceTree = "<group>"; };
+		07A5DCD0154F8DBE00021112 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Model/Bullet.m; sourceTree = "<group>"; };
+		07A5DCD2154F8DCC00021112 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; name = BulletManager.h; path = Model/BulletManager.h; sourceTree = "<group>"; };
+		07A5DCD3154F8DCC00021112 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BulletManager.m; path = Model/BulletManager.m; sourceTree = "<group>"; };
 		07A5DCD6154F9DBD00021112 /* button0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button0.png; sourceTree = "<group>"; };
 		07A5DCD7154F9DBD00021112 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
 		07A5DCD8154F9DBD00021112 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
@@ -363,10 +363,10 @@
 		07A5DCCE154F8D9700021112 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				07A5DCCF154F8DBE00021112 /* Command.h */,
-				07A5DCD0154F8DBE00021112 /* Command.m */,
-				07A5DCD2154F8DCC00021112 /* CommandManager.h */,
-				07A5DCD3154F8DCC00021112 /* CommandManager.m */,
+				07A5DCCF154F8DBE00021112 /* Bullet.h */,
+				07A5DCD0154F8DBE00021112 /* Bullet.m */,
+				07A5DCD2154F8DCC00021112 /* BulletManager.h */,
+				07A5DCD3154F8DCC00021112 /* BulletManager.m */,
 				07A5DCE215501AD300021112 /* Enemy.h */,
 				07A5DCE315501AD300021112 /* Enemy.m */,
 				07A5DCE51550409D00021112 /* EnemyManager.h */,
@@ -644,8 +644,8 @@
 				073D503B154F6A12007773C9 /* KWUtility.m in Sources */,
 				073D503C154F6A12007773C9 /* KWVector.m in Sources */,
 				073D503D154F6A12007773C9 /* NSArrayExtension.m in Sources */,
-				07A5DCD1154F8DBE00021112 /* Command.m in Sources */,
-				07A5DCD4154F8DCC00021112 /* CommandManager.m in Sources */,
+				07A5DCD1154F8DBE00021112 /* Bullet.m in Sources */,
+				07A5DCD4154F8DCC00021112 /* BulletManager.m in Sources */,
 				07A5DCE415501AD300021112 /* Enemy.m in Sources */,
 				07A5DCE71550409D00021112 /* EnemyManager.m in Sources */,
 				07D700BC1552E5110070B177 /* Marker.m in Sources */,

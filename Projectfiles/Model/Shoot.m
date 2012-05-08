@@ -8,16 +8,19 @@
 
 #import "Shoot.h"
 
+@interface Shoot()
+@end
+
 @implementation Shoot
-@synthesize commands;
+@synthesize bullets;
 @synthesize time;
 @synthesize direction;
 
-- (id)initWithCommands:(NSArray *)array {
+- (id)initWithbullets:(NSArray *)array time:(float)t {
   self = [super init];
   if (self) {
-    commands = array;
-    time = -1;
+    bullets = array;
+    time = t;
   }
   return self;
 }

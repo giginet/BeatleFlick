@@ -7,10 +7,10 @@
 //
 
 #import "EnemyManager.h"
-#import "Command.h"
+#import "Bullet.h"
 
 @interface EnemyManager()
-- (NSString*)filenameWithType:(NSString*)prefix type:(CommandType)type;
+- (NSString*)filenameWithType:(NSString*)prefix type:(BulletType)type;
 @end
 
 @implementation EnemyManager
@@ -26,13 +26,13 @@
 }
 
 - (Enemy*)popEnemy:(Direction)direction {
-  CommandType types[] = {
-    CommandTypeCircle, 
-    CommandTypeSquare, 
-    CommandTypeTriangle
+  BulletType types[] = {
+    BulletTypeCircle, 
+    BulletTypeSquare, 
+    BulletTypeTriangle
   };
   int idx = [random_ nextIntFrom:0 to:2];
-  CommandType type = types[idx];
+  BulletType type = types[idx];
   NSString* filename = [self filenameWithType:@"enemy" type:type];
   Enemy* enemy = [[Enemy alloc] initWithFile:filename type:type direction:direction];
   enemy.manager = self;
@@ -55,7 +55,7 @@
   return nil;
 }
 
-- (BOOL)attackEnemy:(Direction)dir type:(CommandType)type {
+- (BOOL)attackEnemy:(Direction)dir type:(BulletType)type {
   for (Enemy* enemy in self.enemies) {
     if (enemy.direction == dir) {
       if (enemy.type == type) {
@@ -76,7 +76,7 @@
   return NO;
 }
 
-- (NSString*)filenameWithType:(NSString *)prefix type:(CommandType)type {
+- (NSString*)filenameWithType:(NSString *)prefix type:(BulletType)type {
   return [NSString stringWithFormat:@"%@%d.png", prefix, type];
 }
 

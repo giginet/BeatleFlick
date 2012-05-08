@@ -1,19 +1,19 @@
 //
-//  Command.m
+//  Bullet.m
 //  FlickFreak
 //
 //  Created by  on 2012/5/1.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "Command.h"
+#import "Bullet.h"
 
-@implementation Command
+@implementation Bullet
 @synthesize type;
 @synthesize justBeat;
 @synthesize time;
 
-- (id)initWithCommandType:(CommandType)t {
+- (id)initWithBulletType:(BulletType)t {
   self = [super init];
   if (self) {
     type = t;

@@ -1,5 +1,5 @@
 //
-//  Command.h
+//  Bullet.h
 //  FlickFreak
 //
 //  Created by  on 2012/5/1.
@@ -9,18 +9,18 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-  CommandTypeCircle,
-  CommandTypeSquare,
-  CommandTypeTriangle
-} CommandType;
+  BulletTypeCircle,
+  BulletTypeSquare,
+  BulletTypeTriangle
+} BulletType;
 
-@interface Command : NSObject {
+@interface Bullet : NSObject {
 }
 
-@property(readonly) CommandType type;
+@property(readonly) BulletType type;
 @property(readwrite) BOOL justBeat;
 @property(readwrite) float time;
 
-- (id)initWithCommandType:(CommandType)type;
+- (id)initWithBulletType:(BulletType)type;
 
 @end

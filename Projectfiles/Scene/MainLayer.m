@@ -9,11 +9,11 @@
 #import "MainLayer.h"
 #import "CCNodeExtensions.h"
 
-#import "Command.h"
+#import "bullet.h"
 #import "Shoot.h"
 
 @interface MainLayer()
-- (void)pressButton:(CommandType)type;
+- (void)pressButton:(BulletType)type;
 - (void)pollFlick;
 - (void)attackTo:(Direction)dir;
 @end
@@ -49,7 +49,7 @@
     
     shoots_ = [NSMutableArray array];
     
-    manager = [[CommandManager alloc] init];
+    manager = [[BulletManager alloc] init];
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
     music = [[Music alloc] initWithFile:@"stage1.caf" bpm:130];
@@ -63,6 +63,8 @@
     [[OALSimpleAudio sharedInstance] preloadEffect:@"flick.caf"];
     
     player_ = [Player spriteWithFile:@"button0.png"];
+    
+    timer_ = [[GameTimer alloc] init];
   }
   return self;
 }
@@ -70,6 +72,7 @@
 - (void)onEnter {
   [super onEnter];
   [self.music play];
+  [timer_ play];
 }
 
 - (void)update:(ccTime)dt {
@@ -90,9 +93,10 @@
   return YES;
 }
 
-- (void)pressButton:(CommandType)type {
-  [manager pushCommand:type];
-  if ([self isJustBeat]) {
+- (void)pressButton:(BulletType)type {
+  BOOL isJustBeat = [self isJustBeat];
+  [manager pushBullet:type time:timer_.time justBeat:isJustBeat];
+  if (isJustBeat) {
     [[OALSimpleAudio sharedInstance] playEffect:@"decide.caf"];
     player_.combo += 1;
   } else {
@@ -108,6 +112,7 @@
       if (dir == KKSwipeGestureDirectionLeft || dir == KKSwipeGestureDirectionRight) {        
         Direction d = dir == KKSwipeGestureDirectionLeft ? DirectionLeft : DirectionRight;
         Shoot* shoot = [self.manager shoot:d time:0];
+        shoot.time = timer_.time;
         [shoots_ addObject:shoot];
       }
       if ([self isJustBeat]) {
@@ -121,8 +126,8 @@
 }
 
 - (void)attackTo:(Direction)dir {
-  Command* command = [self.manager popCommand];
-  BOOL result = [enemyManager attackEnemy:dir type:command.type];
+  Bullet* bullet = [self.manager popBullet];
+  BOOL result = [enemyManager attackEnemy:dir type:bullet.type];
   if (result) {
     NSLog(@"hit");
   } else {

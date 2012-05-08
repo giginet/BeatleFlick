@@ -7,7 +7,7 @@
 //
 
 #import "CCSprite.h"
-#import "Command.h"
+#import "Bullet.h"
 
 @class EnemyManager;
 
@@ -20,12 +20,12 @@ typedef enum {
 @interface Enemy : CCSprite
 
 @property(readwrite) int hp;
-@property(readonly) CommandType type;
+@property(readonly) BulletType type;
 @property(readonly) Direction direction;
 @property(readwrite, weak) EnemyManager* manager;
 
 - (id)initWithFile:(NSString*)filename 
-              type:(CommandType)t 
+              type:(BulletType)t 
          direction:(Direction)dir;
 - (BOOL)damage:(int)damage;
 - (void)death;

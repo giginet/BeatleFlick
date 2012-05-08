@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Command.h"
+#import "Bullet.h"
 #import "Enemy.h"
 
 @interface Shoot : NSObject {
-  NSMutableArray* commands_;
+  NSMutableArray* bullets_;
 }
 
 @property(readwrite) float time;
 @property(readwrite) Direction direction;
-@property(readonly) NSArray* commands;
+@property(readonly) NSArray* bullets;
 
-- (id)initWithCommands:(NSArray*)array;
+- (id)initWithbullets:(NSArray*)array time:(float)time;
 
 @end

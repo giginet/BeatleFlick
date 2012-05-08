@@ -26,7 +26,7 @@
   return self;
 }
 
-- (id)initWithFile:(NSString *)filename type:(CommandType)t direction:(Direction)dir {
+- (id)initWithFile:(NSString *)filename type:(BulletType)t direction:(Direction)dir {
   self = [super initWithFile:filename];
   if (self) {
     hp = 1;

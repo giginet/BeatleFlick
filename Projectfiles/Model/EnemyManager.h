@@ -19,7 +19,7 @@
 
 - (Enemy*)popEnemy:(Direction)direction;
 - (Enemy*)lotPopEnemy;
-- (BOOL)attackEnemy:(Direction)dir type:(CommandType)type;
+- (BOOL)attackEnemy:(Direction)dir type:(BulletType)type;
 - (BOOL)removeEnemy:(Enemy*)enemy;
 
 @end
