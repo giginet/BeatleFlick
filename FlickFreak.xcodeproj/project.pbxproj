@@ -46,7 +46,6 @@
 		07D700C11552F62D0070B177 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700C01552F62D0070B177 /* Music.m */; };
 		07D700C21552FFB90070B177 /* sample.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700BE1552F5B50070B177 /* sample.caf */; };
 		07D700C5155304190070B177 /* decide.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700C4155304190070B177 /* decide.caf */; };
-		07D700CC15530EDF0070B177 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700CB15530EDF0070B177 /* background.png */; };
 		07D700CF1554E8DE0070B177 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700CE1554E8DE0070B177 /* Player.m */; };
 		07D700D215550BC20070B177 /* Shoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D700D115550BC20070B177 /* Shoot.m */; };
 		07D700D41555ECE60070B177 /* stage1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07D700D31555EC890070B177 /* stage1.caf */; };
@@ -58,6 +57,7 @@
 		07D700E51558F2CB0070B177 /* button0_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700E21558F2CB0070B177 /* button0_selected.png */; };
 		07D700E61558F2CB0070B177 /* button1_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700E31558F2CB0070B177 /* button1_selected.png */; };
 		07D700E71558F2CB0070B177 /* button2_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700E41558F2CB0070B177 /* button2_selected.png */; };
+		07D700E91558F4510070B177 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 07D700E81558F4510070B177 /* background.png */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
 		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
 		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
@@ -161,7 +161,6 @@
 		07D700BF1552F62D0070B177 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Music.h; path = Model/Music.h; sourceTree = "<group>"; };
 		07D700C01552F62D0070B177 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Music.m; path = Model/Music.m; sourceTree = "<group>"; };
 		07D700C4155304190070B177 /* decide.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = decide.caf; sourceTree = "<group>"; };
-		07D700CB15530EDF0070B177 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		07D700CD1554E8DE0070B177 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		07D700CE1554E8DE0070B177 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		07D700D015550BC20070B177 /* Shoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shoot.h; path = Model/Shoot.h; sourceTree = "<group>"; };
@@ -177,6 +176,7 @@
 		07D700E21558F2CB0070B177 /* button0_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button0_selected.png; sourceTree = "<group>"; };
 		07D700E31558F2CB0070B177 /* button1_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1_selected.png; sourceTree = "<group>"; };
 		07D700E41558F2CB0070B177 /* button2_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2_selected.png; sourceTree = "<group>"; };
+		07D700E81558F4510070B177 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -408,7 +408,7 @@
 				07D700E21558F2CB0070B177 /* button0_selected.png */,
 				07D700E31558F2CB0070B177 /* button1_selected.png */,
 				07D700E41558F2CB0070B177 /* button2_selected.png */,
-				07D700CB15530EDF0070B177 /* background.png */,
+				07D700E81558F4510070B177 /* background.png */,
 				07A5DCD9154F9DBD00021112 /* enemy0.png */,
 				07A5DCDA154F9DBD00021112 /* enemy1.png */,
 				07A5DCDB154F9DBD00021112 /* enemy2.png */,
@@ -625,10 +625,10 @@
 				07A5DCE0154F9DBD00021112 /* enemy1.png in Resources */,
 				07A5DCE1154F9DBD00021112 /* enemy2.png in Resources */,
 				07D700C5155304190070B177 /* decide.caf in Resources */,
-				07D700CC15530EDF0070B177 /* background.png in Resources */,
 				07D700E51558F2CB0070B177 /* button0_selected.png in Resources */,
 				07D700E61558F2CB0070B177 /* button1_selected.png in Resources */,
 				07D700E71558F2CB0070B177 /* button2_selected.png in Resources */,
+				07D700E91558F4510070B177 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
