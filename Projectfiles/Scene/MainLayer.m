@@ -94,8 +94,8 @@
     if([button containsTouch:touch]){
       [button setTexture:[[CCTextureCache sharedTextureCache] addImage:[NSString stringWithFormat:@"button%d_selected.png", i]]];
       [self pressButton:button.tag];
-      ++i;
     }
+    ++i;
   }
   return YES;
 }
