@@ -16,7 +16,7 @@
 @synthesize shooted;
 
 - (id)initWithBulletType:(BulletType)t {
-  self = [super init];
+  self = [super initWithFile:[NSString stringWithFormat:@"bullet%d.png", t]];
   if (self) {
     type = t;
     justBeat = NO;

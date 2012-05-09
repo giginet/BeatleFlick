@@ -32,6 +32,9 @@
 		073D503E154F6A12007773C9 /* README.rst in Resources */ = {isa = PBXBuildFile; fileRef = 073D5025154F6A12007773C9 /* README.rst */; };
 		073D503F154F6A12007773C9 /* graphic_converter.py in Resources */ = {isa = PBXBuildFile; fileRef = 073D5027154F6A12007773C9 /* graphic_converter.py */; };
 		073D5040154F6A12007773C9 /* sound_converter.py in Resources */ = {isa = PBXBuildFile; fileRef = 073D5028154F6A12007773C9 /* sound_converter.py */; };
+		0775CD5A155A278800275102 /* bullet0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD57155A278800275102 /* bullet0.png */; };
+		0775CD5B155A278800275102 /* bullet1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD58155A278800275102 /* bullet1.png */; };
+		0775CD5C155A278800275102 /* bullet2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0775CD59155A278800275102 /* bullet2.png */; };
 		07A5DCD1154F8DBE00021112 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCD0154F8DBE00021112 /* Bullet.m */; };
 		07A5DCD4154F8DCC00021112 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5DCD3154F8DCC00021112 /* BulletManager.m */; };
 		07A5DCDC154F9DBD00021112 /* button0.png in Resources */ = {isa = PBXBuildFile; fileRef = 07A5DCD6154F9DBD00021112 /* button0.png */; };
@@ -141,6 +144,9 @@
 		073D5025154F6A12007773C9 /* README.rst */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.rst; sourceTree = "<group>"; };
 		073D5027154F6A12007773C9 /* graphic_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = graphic_converter.py; sourceTree = "<group>"; };
 		073D5028154F6A12007773C9 /* sound_converter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = sound_converter.py; sourceTree = "<group>"; };
+		0775CD57155A278800275102 /* bullet0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet0.png; sourceTree = "<group>"; };
+		0775CD58155A278800275102 /* bullet1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet1.png; sourceTree = "<group>"; };
+		0775CD59155A278800275102 /* bullet2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet2.png; sourceTree = "<group>"; };
 		07A5DCCF154F8DBE00021112 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Model/Bullet.h; sourceTree = "<group>"; };
 		07A5DCD0154F8DBE00021112 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Model/Bullet.m; sourceTree = "<group>"; };
 		07A5DCD2154F8DCC00021112 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BulletManager.h; path = Model/BulletManager.h; sourceTree = "<group>"; };
@@ -402,6 +408,9 @@
 		07A5DCD5154F9DBD00021112 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0775CD57155A278800275102 /* bullet0.png */,
+				0775CD58155A278800275102 /* bullet1.png */,
+				0775CD59155A278800275102 /* bullet2.png */,
 				07A5DCD6154F9DBD00021112 /* button0.png */,
 				07A5DCD7154F9DBD00021112 /* button1.png */,
 				07A5DCD8154F9DBD00021112 /* button2.png */,
@@ -629,6 +638,9 @@
 				07D700E61558F2CB0070B177 /* button1_selected.png in Resources */,
 				07D700E71558F2CB0070B177 /* button2_selected.png in Resources */,
 				07D700E91558F4510070B177 /* background.png in Resources */,
+				0775CD5A155A278800275102 /* bullet0.png in Resources */,
+				0775CD5B155A278800275102 /* bullet1.png in Resources */,
+				0775CD5C155A278800275102 /* bullet2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

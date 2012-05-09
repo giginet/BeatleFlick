@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "heqet.h"
 
 @class Shoot;
 
@@ -16,7 +17,7 @@ typedef enum {
   BulletTypeTriangle
 } BulletType;
 
-@interface Bullet : NSObject {
+@interface Bullet : CCSprite {
   id target_;
   SEL selector_;
 }

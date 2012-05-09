@@ -50,7 +50,10 @@
     
     shoots_ = [NSMutableArray array];
     
-    manager = [[BulletManager alloc] init];
+    manager = [BulletManager node];
+    manager.position = ccp(director.screenCenter.x, 300);
+    [self addChild:manager];
+    
     enemyManager = [[EnemyManager alloc] init];
     self.isTouchEnabled = YES;
     music = [[Music alloc] initWithFile:@"stage1.caf" bpm:130];

@@ -10,7 +10,7 @@
 #import "Bullet.h"
 #import "Shoot.h"
 
-@interface BulletManager : NSObject {
+@interface BulletManager : CCLayer {
   NSMutableArray* bullets_;
 }
 
@@ -19,7 +19,6 @@
 - (void)pushBullet:(BulletType)type time:(float)time justBeat:(BOOL)beat;
 - (Bullet*)popBullet;
 - (void)clearBullets;
-- (void)printStack;
 - (Shoot*)shoot:(Direction)dir time:(float)time;
 
 @end
